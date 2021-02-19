@@ -41,8 +41,8 @@ struct ContentView: View {
                         .padding()
                     
                     Picker(selection: $selectedFood, label: Text("foodPicker")) {
-                        ForEach(0..<allFood.count) { id in
-                            Text(allFood[id].name).tag(id)
+                        ForEach(allFood.indices, id:\.self) { index in
+                            Text(allFood[index].name).tag(index)
                         }
                     }
                     Text("Selected meal: \(selectedFood)")
