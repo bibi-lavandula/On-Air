@@ -14,17 +14,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject private var foodDatas = GetFoodData()
+    @ObservedObject var foodDatas = FoodViewModel()//array from db
     
     @State private var id = ""
-    @State private var selectedFood = ""
+    @State public var selection: Int = 0
     
     var body: some View {
         
         NavigationView{
             
             let allFood = self.foodDatas.datas
-            
+ 
             ZStack {
                 Color("brandBlue")
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -36,21 +36,28 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    Text("Select the meal to prepare")
+                    Text("Select a meal to prepare")
                         .font(.system(size: 25))
                         .padding()
-                    
-                    Picker(selection: $selectedFood, label: Text("foodPicker")) {
+                        
+                    Picker(selection: $selection, label: Text("Select your food")) {
                         ForEach(allFood.indices, id:\.self) { index in
-                            Text(allFood[index].name).tag(index)
+                            Text(allFood[index].name.capitalized).tag(index)
                         }
                     }
-                    Text("Selected meal: \(selectedFood)")
+                    .onAppear() {
+                        self.foodDatas.fetchData()
+                    }
+                   
+                    if allFood.isEmpty {
+                        Text("")
+                    } else {
+                        Text("Selected meal: \(allFood[selection].name)")}
                     
                     Spacer()
                     
                     NavigationLink(
-                        destination: selectedFoodView(),
+                        destination: DetailView(foodDatas: foodDatas, selection: self.$selection),
                         label: {
                             Text("Let's make this!")
                                 .font(.system(size: 20))
@@ -75,23 +82,6 @@ struct ContentView: View {
         
     }
 }
-
-struct selectedFoodView: View {
-    
-    
-    var body: some View {
-        NavigationView{
-            ZStack {
-                Color("brandBlue")
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
-            }
-            
-            
-        }
-    }
-}
-
 
 
 struct chefView: View {

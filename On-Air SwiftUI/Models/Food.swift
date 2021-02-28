@@ -8,7 +8,7 @@
 import Foundation
 
 struct Food: Identifiable {
-    let id = UUID().uuidString
+    let id: String
     let name: String
     let weight: Int
     let temp: Int

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		676F4D81FE6C7A2DAB0CEA1B /* libPods-On-Air SwiftUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D439C8BA4E40C6FAC148C0 /* libPods-On-Air SwiftUI.a */; };
+		06ED72771E040694998D6C53 /* Pods_On_Air_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC12873C68E1889C08BF8244 /* Pods_On_Air_SwiftUI.framework */; };
+		E503504F25E4F85600DAE3AB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503504E25E4F85500DAE3AB /* DetailView.swift */; };
 		E528042E25DAC871001E5446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528042D25DAC871001E5446 /* AppDelegate.swift */; };
 		E528043025DAC871001E5446 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528042F25DAC871001E5446 /* SceneDelegate.swift */; };
 		E528043225DAC871001E5446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528043125DAC871001E5446 /* ContentView.swift */; };
@@ -16,13 +17,14 @@
 		E528043A25DAC875001E5446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E528043825DAC875001E5446 /* LaunchScreen.storyboard */; };
 		E528045125DBFDE6001E5446 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E528045025DBFDE6001E5446 /* GoogleService-Info.plist */; };
 		E528046525DDC34E001E5446 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528046425DDC34E001E5446 /* Food.swift */; };
-		E528046C25DDCBBE001E5446 /* GetFoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528046B25DDCBBE001E5446 /* GetFoodData.swift */; };
+		E528046C25DDCBBE001E5446 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528046B25DDCBBE001E5446 /* FoodViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39D953648B064DABA87E3215 /* Pods-On-Air SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-On-Air SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-On-Air SwiftUI/Pods-On-Air SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		620E3D25B7DB54E1FECA553C /* Pods-On-Air SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-On-Air SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-On-Air SwiftUI/Pods-On-Air SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
-		B1D439C8BA4E40C6FAC148C0 /* libPods-On-Air SwiftUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-On-Air SwiftUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC12873C68E1889C08BF8244 /* Pods_On_Air_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_On_Air_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E503504E25E4F85500DAE3AB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E528042A25DAC871001E5446 /* On-Air SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On-Air SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E528042D25DAC871001E5446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E528042F25DAC871001E5446 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +35,7 @@
 		E528043B25DAC875001E5446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E528045025DBFDE6001E5446 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E528046425DDC34E001E5446 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
-		E528046B25DDCBBE001E5446 /* GetFoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFoodData.swift; sourceTree = "<group>"; };
+		E528046B25DDCBBE001E5446 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676F4D81FE6C7A2DAB0CEA1B /* libPods-On-Air SwiftUI.a in Frameworks */,
+				06ED72771E040694998D6C53 /* Pods_On_Air_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E528043125DAC871001E5446 /* ContentView.swift */,
+				E503504E25E4F85500DAE3AB /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,7 +122,7 @@
 		E528046A25DDCACF001E5446 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E528046B25DDCBBE001E5446 /* GetFoodData.swift */,
+				E528046B25DDCBBE001E5446 /* FoodViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -127,7 +130,7 @@
 		FB7A79B8F6D664B13EA832DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B1D439C8BA4E40C6FAC148C0 /* libPods-On-Air SwiftUI.a */,
+				BC12873C68E1889C08BF8244 /* Pods_On_Air_SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,9 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E528046C25DDCBBE001E5446 /* GetFoodData.swift in Sources */,
+				E528046C25DDCBBE001E5446 /* FoodViewModel.swift in Sources */,
 				E528042E25DAC871001E5446 /* AppDelegate.swift in Sources */,
 				E528046525DDC34E001E5446 /* Food.swift in Sources */,
+				E503504F25E4F85600DAE3AB /* DetailView.swift in Sources */,
 				E528043025DAC871001E5446 /* SceneDelegate.swift in Sources */,
 				E528043225DAC871001E5446 /* ContentView.swift in Sources */,
 			);
