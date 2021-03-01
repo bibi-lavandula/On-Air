@@ -10,6 +10,7 @@ import Foundation
 struct Food: Identifiable {
     let id: String
     let name: String
+    let des: String
     let weight: Int
     let temp: Int
     let time: Int

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		06ED72771E040694998D6C53 /* Pods_On_Air_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC12873C68E1889C08BF8244 /* Pods_On_Air_SwiftUI.framework */; };
 		E503504F25E4F85600DAE3AB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503504E25E4F85500DAE3AB /* DetailView.swift */; };
+		E51C9B5125EC63C1003086A1 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51C9B5025EC63C0003086A1 /* TimerView.swift */; };
+		E51C9B5525EC7177003086A1 /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E51C9B5425EC7177003086A1 /* PatrickHand-Regular.ttf */; };
+		E51C9B5925EC750B003086A1 /* Ruda-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E51C9B5825EC750B003086A1 /* Ruda-Regular.ttf */; };
+		E51C9B5E25EC7643003086A1 /* Ruda-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E51C9B5C25EC7641003086A1 /* Ruda-ExtraBold.ttf */; };
+		E51C9B5F25EC7643003086A1 /* Ruda-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E51C9B5D25EC7643003086A1 /* Ruda-Bold.ttf */; };
 		E528042E25DAC871001E5446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528042D25DAC871001E5446 /* AppDelegate.swift */; };
 		E528043025DAC871001E5446 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528042F25DAC871001E5446 /* SceneDelegate.swift */; };
 		E528043225DAC871001E5446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528043125DAC871001E5446 /* ContentView.swift */; };
@@ -25,6 +30,11 @@
 		620E3D25B7DB54E1FECA553C /* Pods-On-Air SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-On-Air SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-On-Air SwiftUI/Pods-On-Air SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		BC12873C68E1889C08BF8244 /* Pods_On_Air_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_On_Air_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E503504E25E4F85500DAE3AB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E51C9B5025EC63C0003086A1 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		E51C9B5425EC7177003086A1 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PatrickHand-Regular.ttf"; path = "On-Air SwiftUI/fonts/PatrickHand-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		E51C9B5825EC750B003086A1 /* Ruda-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ruda-Regular.ttf"; path = "On-Air SwiftUI/fonts/Ruda-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		E51C9B5C25EC7641003086A1 /* Ruda-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ruda-ExtraBold.ttf"; path = "On-Air SwiftUI/fonts/Ruda-ExtraBold.ttf"; sourceTree = SOURCE_ROOT; };
+		E51C9B5D25EC7643003086A1 /* Ruda-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ruda-Bold.ttf"; path = "On-Air SwiftUI/fonts/Ruda-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		E528042A25DAC871001E5446 /* On-Air SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On-Air SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E528042D25DAC871001E5446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E528042F25DAC871001E5446 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +69,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E51C9B5325EC7150003086A1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E51C9B5825EC750B003086A1 /* Ruda-Regular.ttf */,
+				E51C9B5D25EC7643003086A1 /* Ruda-Bold.ttf */,
+				E51C9B5C25EC7641003086A1 /* Ruda-ExtraBold.ttf */,
+				E51C9B5425EC7177003086A1 /* PatrickHand-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		E528042125DAC870001E5446 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +101,7 @@
 		E528042C25DAC871001E5446 /* On-Air SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E51C9B5325EC7150003086A1 /* fonts */,
 				E528042D25DAC871001E5446 /* AppDelegate.swift */,
 				E528042F25DAC871001E5446 /* SceneDelegate.swift */,
 				E528046A25DDCACF001E5446 /* ViewModels */,
@@ -115,6 +137,7 @@
 			children = (
 				E528043125DAC871001E5446 /* ContentView.swift */,
 				E503504E25E4F85500DAE3AB /* DetailView.swift */,
+				E51C9B5025EC63C0003086A1 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,7 +218,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E528043A25DAC875001E5446 /* LaunchScreen.storyboard in Resources */,
+				E51C9B5925EC750B003086A1 /* Ruda-Regular.ttf in Resources */,
+				E51C9B5E25EC7643003086A1 /* Ruda-ExtraBold.ttf in Resources */,
+				E51C9B5F25EC7643003086A1 /* Ruda-Bold.ttf in Resources */,
 				E528045125DBFDE6001E5446 /* GoogleService-Info.plist in Resources */,
+				E51C9B5525EC7177003086A1 /* PatrickHand-Regular.ttf in Resources */,
 				E528043725DAC875001E5446 /* Preview Assets.xcassets in Resources */,
 				E528043425DAC875001E5446 /* Assets.xcassets in Resources */,
 			);
@@ -250,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51C9B5125EC63C1003086A1 /* TimerView.swift in Sources */,
 				E528046C25DDCBBE001E5446 /* FoodViewModel.swift in Sources */,
 				E528042E25DAC871001E5446 /* AppDelegate.swift in Sources */,
 				E528046525DDC34E001E5446 /* Food.swift in Sources */,

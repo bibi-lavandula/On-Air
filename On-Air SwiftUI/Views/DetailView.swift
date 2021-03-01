@@ -17,39 +17,70 @@ struct DetailView: View {
     
     @State private var imageURL = URL(string: "")
     
-    
     var body: some View {
         
-        NavigationView{
+        let allFood = self.foodDatas.datas
+        
+        ZStack {
             
-            let allFood = self.foodDatas.datas
+            Color("brandBlue")
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-            ZStack {
-                Color("brandBlue")
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                VStack {
+            VStack {
+                
+                //Text("\(imageURL?.absoluteString ?? "placeholder")")
+                
+                WebImage(url: imageURL)
+                    .resizable()
+                    .frame(width: 230, height: 230, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
                     
-                    //Text("\(imageURL?.absoluteString ?? "placeholder")")
-                        
-                    WebImage(url: imageURL)
-                        .resizable()
-                        .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .aspectRatio(contentMode: .fit)
-                        
                     .onAppear(perform: loadImageFromFirebase)
-                    
-                    
-                    Text("Cooking Time: \(allFood[selection].time) mins")
-                    
                 
+                Text("\(allFood[selection].des)")
+                    .frame(width: 350, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .font(Font.custom("Ruda-Regular", size: 15))
+                
+                Spacer()
+                    .frame(maxHeight: 20)
+                
+                Text("Cooking portion: \(allFood[selection].weight) gram")
+                    .font(Font.custom("Ruda-Regular", size: 15))
+                
+                Spacer()
+                    .frame(maxHeight: 20)
+                
+                Text("Cooking time: \(allFood[selection].time) mins")
+                    .font(Font.custom("Ruda-Regular", size: 15))
+                
+                Spacer()
+                    .frame(maxHeight: 50)
+                
+                ZStack{
+                    Image("chef")
+                        .resizable()
+                        .frame(width: 150, height: 270, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .aspectRatio(1, contentMode: .fit)
+                    
+                    NavigationLink(
+                        destination: TimerView(foodDatas: foodDatas, selection: self.$selection),
+                        label: {
+                            Text("Continue")
+                                .font(Font.custom("Ruda-ExtraBold", size: 20))
+                                .foregroundColor(Color.black)
+                                .padding(12)
+                        })
+                        .background(Color.white)
+                        .cornerRadius(12)
                 }
-                
-                
-                
             }
-            
-            
+            .navigationBarTitle("\(allFood[selection].name.capitalized)",
+                                displayMode: .inline)
         }
+        
+        
+        
     }
     
     func loadImageFromFirebase() {

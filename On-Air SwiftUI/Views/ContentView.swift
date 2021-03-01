@@ -18,13 +18,14 @@ struct ContentView: View {
     
     @State private var id = ""
     @State public var selection: Int = 0
+
     
     var body: some View {
         
         NavigationView{
             
             let allFood = self.foodDatas.datas
- 
+            
             ZStack {
                 Color("brandBlue")
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -37,22 +38,26 @@ struct ContentView: View {
                     Spacer()
                     
                     Text("Select a meal to prepare")
-                        .font(.system(size: 25))
-                        .padding()
-                        
+                        .font(Font.custom("Ruda-Bold", size: 25))
+                    
                     Picker(selection: $selection, label: Text("Select your food")) {
                         ForEach(allFood.indices, id:\.self) { index in
                             Text(allFood[index].name.capitalized).tag(index)
                         }
+                        .font(Font.custom("Ruda-Regular", size: 20))
                     }
                     .onAppear() {
-                        self.foodDatas.fetchData()
+                        if allFood.isEmpty{
+                            self.foodDatas.fetchData()
+                        } else {
+                            return
+                        }
                     }
-                   
-                    if allFood.isEmpty {
-                        Text("")
-                    } else {
-                        Text("Selected meal: \(allFood[selection].name)")}
+                    
+                    /*if allFood.isEmpty {
+                     Text("")
+                     } else {
+                     Text("Selected meal: \(allFood[selection].name)")}*/
                     
                     Spacer()
                     
@@ -60,8 +65,7 @@ struct ContentView: View {
                         destination: DetailView(foodDatas: foodDatas, selection: self.$selection),
                         label: {
                             Text("Let's make this!")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
+                                .font(Font.custom("Ruda-ExtraBold", size: 20))
                                 .foregroundColor(Color.black)
                                 .padding(12)
                         })
