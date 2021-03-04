@@ -25,6 +25,8 @@
 		E5B0247725F06A2000785F01 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0247625F06A2000785F01 /* TimerViewModel.swift */; };
 		E5B0247A25F06B3800785F01 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0247925F06B3800785F01 /* TimerMode.swift */; };
 		E5B0247F25F0D88400785F01 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5B0247E25F0D88400785F01 /* alarm_sound.mp3 */; };
+		E5B0248C25F1824F00785F01 /* ProgressTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0248B25F1824F00785F01 /* ProgressTrackView.swift */; };
+		E5B0248F25F183E000785F01 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0248E25F183E000785F01 /* ProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E5B0247625F06A2000785F01 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		E5B0247925F06B3800785F01 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMode.swift; sourceTree = "<group>"; };
 		E5B0247E25F0D88400785F01 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm_sound.mp3; path = "On-Air SwiftUI/alarm_sound.mp3"; sourceTree = SOURCE_ROOT; };
+		E5B0248B25F1824F00785F01 /* ProgressTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackView.swift; sourceTree = "<group>"; };
+		E5B0248E25F183E000785F01 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 				E528043125DAC871001E5446 /* ContentView.swift */,
 				E503504E25E4F85500DAE3AB /* DetailView.swift */,
 				E51C9B5025EC63C0003086A1 /* TimerView.swift */,
+				E5B0248B25F1824F00785F01 /* ProgressTrackView.swift */,
+				E5B0248E25F183E000785F01 /* ProgressBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,9 +294,11 @@
 				E5B0247A25F06B3800785F01 /* TimerMode.swift in Sources */,
 				E528046C25DDCBBE001E5446 /* FoodViewModel.swift in Sources */,
 				E528042E25DAC871001E5446 /* AppDelegate.swift in Sources */,
+				E5B0248F25F183E000785F01 /* ProgressBarView.swift in Sources */,
 				E528046525DDC34E001E5446 /* Food.swift in Sources */,
 				E503504F25E4F85600DAE3AB /* DetailView.swift in Sources */,
 				E528043025DAC871001E5446 /* SceneDelegate.swift in Sources */,
+				E5B0248C25F1824F00785F01 /* ProgressTrackView.swift in Sources */,
 				E528043225DAC871001E5446 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
