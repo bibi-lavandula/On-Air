@@ -19,10 +19,12 @@
 		E528043225DAC871001E5446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528043125DAC871001E5446 /* ContentView.swift */; };
 		E528043425DAC875001E5446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E528043325DAC875001E5446 /* Assets.xcassets */; };
 		E528043725DAC875001E5446 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E528043625DAC875001E5446 /* Preview Assets.xcassets */; };
-		E528043A25DAC875001E5446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E528043825DAC875001E5446 /* LaunchScreen.storyboard */; };
 		E528045125DBFDE6001E5446 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E528045025DBFDE6001E5446 /* GoogleService-Info.plist */; };
 		E528046525DDC34E001E5446 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528046425DDC34E001E5446 /* Food.swift */; };
 		E528046C25DDCBBE001E5446 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E528046B25DDCBBE001E5446 /* FoodViewModel.swift */; };
+		E5B0247725F06A2000785F01 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0247625F06A2000785F01 /* TimerViewModel.swift */; };
+		E5B0247A25F06B3800785F01 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0247925F06B3800785F01 /* TimerMode.swift */; };
+		E5B0247F25F0D88400785F01 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5B0247E25F0D88400785F01 /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +43,13 @@
 		E528043125DAC871001E5446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E528043325DAC875001E5446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E528043625DAC875001E5446 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E528043925DAC875001E5446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E528043B25DAC875001E5446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E528045025DBFDE6001E5446 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E528046425DDC34E001E5446 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		E528046B25DDCBBE001E5446 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
+		E5B0247625F06A2000785F01 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		E5B0247925F06B3800785F01 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMode.swift; sourceTree = "<group>"; };
+		E5B0247E25F0D88400785F01 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm_sound.mp3; path = "On-Air SwiftUI/alarm_sound.mp3"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,16 +105,16 @@
 		E528042C25DAC871001E5446 /* On-Air SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				E51C9B5325EC7150003086A1 /* fonts */,
 				E528042D25DAC871001E5446 /* AppDelegate.swift */,
 				E528042F25DAC871001E5446 /* SceneDelegate.swift */,
-				E528046A25DDCACF001E5446 /* ViewModels */,
+				E51C9B5325EC7150003086A1 /* fonts */,
 				E528046725DDC98F001E5446 /* Models */,
+				E528046A25DDCACF001E5446 /* ViewModels */,
 				E528046925DDCAB2001E5446 /* Views */,
 				E528043325DAC875001E5446 /* Assets.xcassets */,
-				E528043825DAC875001E5446 /* LaunchScreen.storyboard */,
 				E528043B25DAC875001E5446 /* Info.plist */,
 				E528045025DBFDE6001E5446 /* GoogleService-Info.plist */,
+				E5B0247E25F0D88400785F01 /* alarm_sound.mp3 */,
 				E528043525DAC875001E5446 /* Preview Content */,
 			);
 			path = "On-Air SwiftUI";
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E528046425DDC34E001E5446 /* Food.swift */,
+				E5B0247925F06B3800785F01 /* TimerMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E528046B25DDCBBE001E5446 /* FoodViewModel.swift */,
+				E5B0247625F06A2000785F01 /* TimerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,9 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E528043A25DAC875001E5446 /* LaunchScreen.storyboard in Resources */,
 				E51C9B5925EC750B003086A1 /* Ruda-Regular.ttf in Resources */,
 				E51C9B5E25EC7643003086A1 /* Ruda-ExtraBold.ttf in Resources */,
+				E5B0247F25F0D88400785F01 /* alarm_sound.mp3 in Resources */,
 				E51C9B5F25EC7643003086A1 /* Ruda-Bold.ttf in Resources */,
 				E528045125DBFDE6001E5446 /* GoogleService-Info.plist in Resources */,
 				E51C9B5525EC7177003086A1 /* PatrickHand-Regular.ttf in Resources */,
@@ -278,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E51C9B5125EC63C1003086A1 /* TimerView.swift in Sources */,
+				E5B0247725F06A2000785F01 /* TimerViewModel.swift in Sources */,
+				E5B0247A25F06B3800785F01 /* TimerMode.swift in Sources */,
 				E528046C25DDCBBE001E5446 /* FoodViewModel.swift in Sources */,
 				E528042E25DAC871001E5446 /* AppDelegate.swift in Sources */,
 				E528046525DDC34E001E5446 /* Food.swift in Sources */,
@@ -288,17 +296,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E528043825DAC875001E5446 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E528043925DAC875001E5446 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E528043C25DAC875001E5446 /* Debug */ = {
