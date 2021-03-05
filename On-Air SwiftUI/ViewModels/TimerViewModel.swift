@@ -28,10 +28,6 @@ class TimerViewModel: ObservableObject {
             self.secondsLeft -= 1
             if self.secondsLeft == 0 {
                 
-                let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
-                self.player = try! AVAudioPlayer(contentsOf: url!)
-                self.player.play()
-                
                 self.complete()
                 
             }
@@ -40,6 +36,11 @@ class TimerViewModel: ObservableObject {
     }
     
     func complete() {
+        
+        let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+        self.player = try! AVAudioPlayer(contentsOf: url!)
+        self.player.play()
+        
         self.timerMode = .initial
         self.textToUpdate = "🦄🦄Done!🦄🦄"
         timer.invalidate()

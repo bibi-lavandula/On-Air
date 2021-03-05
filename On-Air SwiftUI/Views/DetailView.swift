@@ -32,7 +32,7 @@ struct DetailView: View {
                 
                 WebImage(url: imageURL)
                     .resizable()
-                    .frame(width: 230, height: 230, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .aspectRatio(contentMode: .fit)
                     .padding()
                     
@@ -45,7 +45,7 @@ struct DetailView: View {
                 Spacer()
                     .frame(maxHeight: 20)
                 
-                Text("Cooking portion: \(allFood[selection].weight) gram")
+                Text("Cooking portion: \(allFood[selection].weight) g")
                     .font(Font.custom("Ruda-Regular", size: 15))
                 
                 Spacer()
@@ -55,7 +55,13 @@ struct DetailView: View {
                     .font(Font.custom("Ruda-Regular", size: 15))
                 
                 Spacer()
-                    .frame(maxHeight: 50)
+                    .frame(maxHeight: 20)
+                
+                Text("Cooking temperature: \(allFood[selection].temp) °C")
+                    .font(Font.custom("Ruda-Regular", size: 15))
+                
+                Spacer()
+                    .frame(maxHeight: 20)
                 
                 ZStack{
                     Image("chef")
